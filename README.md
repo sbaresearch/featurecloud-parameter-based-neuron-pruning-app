@@ -1,4 +1,4 @@
-# FeatureCloud Parameter Sanitization Defense App
+# FeatureCloud Parameter Based Neuron Pruning Defense App
 
 The app implements a defense against a black-box data exfiltration attack by pruning the neurons (connections) in a neural network based on the values of the parameters of the trained model.
 
