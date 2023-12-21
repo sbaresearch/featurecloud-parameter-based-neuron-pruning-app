@@ -34,7 +34,7 @@ percentage_to_prune: 10
 ## Output
 
 The app returns the defended model in onnx format, i.e. [`defended_model.onnx`].
-The sanitized model can be used for further inference.
+The defended model can be used for further inference.
 
 ## Workflows
 
