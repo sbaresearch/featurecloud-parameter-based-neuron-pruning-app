@@ -1,5 +1,5 @@
 from FeatureCloud.app.engine.app import AppState, app_state, Role
-from pruning import prune_connections, compare_original_to_modified, sanitize_model, compare_graph_structure
+from pruning import prune_connections, compare_original_to_modified, compare_graph_structure
 import onnx
 import os
 import bios
@@ -63,7 +63,7 @@ class pruning(AppState):
 
   def run(self):
       self.update(progress=0.4)
-      modified_model = sanitize_model(self.load("original_model"), self.load("n_lsbs"))
+      modified_model = prune_connections(self.load("original_model"), self.load("percentage_to_prune"))
       self.update(progress=0.5)
       self.log('Model parameters defended successfully')
       self.store(key="modified_model", value=modified_model)
