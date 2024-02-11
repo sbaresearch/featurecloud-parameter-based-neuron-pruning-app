@@ -30,7 +30,7 @@ class InitialState(AppState):
 @app_state('read_input')
 class InputState(AppState):
     def register(self):
-        self.register_transition('sanitize', Role.COORDINATOR)
+        self.register_transition('prune', Role.COORDINATOR)
 
     def run(self):
         self.update(progress=0.2)

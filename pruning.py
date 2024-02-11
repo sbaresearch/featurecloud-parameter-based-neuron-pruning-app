@@ -23,7 +23,7 @@ def modify_and_update_network(model, percentage_to_prune):
             initializer.CopyFrom(new_initializer)
 
             # Reshape the modified weights to the original shape
-            modified_weights = np.array(modified_weights).reshape(weight_data.shape)
+            modified_weights = np.array(modified_weight_data).reshape(weight_data.shape)
 
             # Convert the modified weights to the serialized binary format
             serialized_data = modified_weights.astype(np.float32).tobytes()
